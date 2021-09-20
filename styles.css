@@ -1,0 +1,448 @@
+:root {
+  --background: rgb(167, 157, 157);
+  --text-color: #f5deb3;
+  --header-color: rgb(0, 29, 56);
+  --hover-color: rgb(245, 194, 100);
+  --home-bg: url("./photos/home.jpg");
+  --about-bg: url("./photos/about.jpg");
+  --projects-bg: url("./photos/projects.jpg");
+  --contact-bg: url("./photos/contact.jpg");
+  --contact-msg-bg: url("./photos/contact-msg.jpg");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: #222;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+}
+
+.content.home {
+  height: 100vh;
+  background-image: var(--home-bg);
+  background-color: var(--background);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position-x: right;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+}
+
+.content.home h1 {
+  margin-left: 2em;
+  font-size: 100px;
+}
+
+.content.about {
+  height: 120vh;
+  background-image: var(--about-bg);
+  background-color: var(--background);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position-x: right;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+}
+
+.content.about h1 {
+  margin-left: 150px;
+  font-size: 70px;
+  margin-bottom: 0;
+}
+.content.about p {
+  margin-left: 150px;
+  margin-top: 1em;
+  font-size: 22.5px;
+}
+
+.content.about .about {
+  width: 60%;
+}
+
+.content.about .image {
+  width: 40%;
+}
+
+.content.contact {
+  height: 100vh;
+  background-image: var(--contact-bg);
+  background-color: rgb(88, 81, 81);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position-x: right;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+}
+
+.content.contact .contact {
+  margin-left: 4em;
+  width: 47%;
+}
+
+.content.contact .contact p {
+  font-size: 22.5px;
+}
+
+.contact-form {
+  width: 40%;
+  margin-top: 3em;
+  background-image: var(--contact-msg-bg);
+  background-color: var(--background);
+  background-blend-mode: multiply;
+  background-size: cover;
+  box-shadow: 5px 5px 5px 0 var(--text-color);
+  border-radius: 20px;
+  padding: 2.5em;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.only-icons {
+  display: flex;
+  font-size: 30px;
+  margin-top: 1em;
+}
+
+.only-icons a i.fab.fa-github,
+.only-icons a i.fab.fa-instagram {
+  margin-left: 1em;
+}
+
+.only-icons a i.fab.fa-linkedin,
+.only-icons a i.fab.fa-github,
+.only-icons a i.fab.fa-instagram {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.only-icons a i.fab.fa-linkedin:hover {
+  color: #0072b1;
+}
+.only-icons a i.fab.fa-github:hover {
+  color: #171515;
+}
+.only-icons a i.fab.fa-instagram:hover {
+  color: #8a3ab9;
+}
+
+#button {
+  background-color: var(--header-color);
+  border: none;
+  color: var(--text-color);
+  box-shadow: 0 0px 5px 0 var(--text-color);
+}
+
+#button:hover {
+  background-color: var(--hover-color);
+  color: var(--header-color);
+  box-shadow: 0 0 10px 0 var(--text-color);
+}
+
+.name {
+  font-weight: 500;
+}
+
+.about a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.about a:hover {
+  color: var(--hover-color);
+}
+
+.content.projects {
+  height: 100%;
+  background-image: var(--projects-bg);
+  background-color: rgb(121, 113, 113);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position-x: right;
+  color: var(--text-color);
+}
+.content.projects h1 {
+  margin: 0;
+  padding-top: 80px;
+  text-align: center;
+  font-size: 70px;
+  margin-bottom: 1em;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5em;
+}
+
+.weather-app,
+.todolist,
+.calculator {
+  display: flex;
+}
+
+.weather-app-details,
+.todo-list-details,
+.calculator-details {
+  margin-left: 2em;
+}
+
+.weather-app-details h2,
+.todo-list-details h2,
+.calculator-details h2 {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.weather-app-details p,
+.todo-list-details p,
+.calculator-details p {
+  width: 80%;
+  font-size: 1.35em;
+  margin-top: 0.5em;
+}
+
+.links {
+  margin-top: 3em;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.source-code,
+.live-project {
+  text-decoration: none;
+  color: var(--text-color);
+  margin-left: 3em;
+  font-size: 1.25em;
+  position: relative;
+}
+
+.source-code:hover,
+.live-project:hover {
+  color: var(--hover-color);
+  text-decoration: none;
+}
+
+.source-code:hover::after,
+.live-project:hover::after {
+  content: "";
+  position: absolute;
+  background: var(--hover-color);
+  height: 2px;
+  width: 100%;
+  display: block;
+}
+
+.project-images {
+  width: 50%;
+  border-radius: 15px;
+  margin-bottom: 2em;
+  box-shadow: 5px 5px 10px 0 black;
+}
+
+.my-photo {
+  width: 300px;
+  height: 300px;
+  margin-left: 6em;
+  transform: scale(1);
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 1px wheat;
+}
+
+header {
+  background: transparent;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+header h1 {
+  font-weight: 300;
+  margin: 0;
+  color: var(--text-color);
+}
+
+header img {
+  margin-bottom: 1px;
+}
+
+header a:hover {
+  text-decoration: none;
+}
+
+.scrolling-active {
+  background: var(--header-color);
+  box-shadow: 0 0 10px 0 black;
+}
+
+.scrolling-active nav a:hover {
+  color: var(--background);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  /* text-transform: uppercase; */
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+  .content {
+    background-position-x: center;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: white;
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+}
