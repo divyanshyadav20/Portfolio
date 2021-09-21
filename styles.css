@@ -405,6 +405,19 @@ nav a:hover {
   background: var(--header-color);
 }
 
+#button {
+  background-color: var(--header-color);
+  border: none;
+  color: var(--text-color);
+  box-shadow: 0 0px 5px 0 var(--text-color);
+}
+
+#button:hover {
+  background-color: var(--hover-color);
+  color: var(--header-color);
+  box-shadow: 0 0 10px 0 var(--text-color);
+}
+
 /* Responsiveness */
 
 @media screen and (min-width: 768px) {
