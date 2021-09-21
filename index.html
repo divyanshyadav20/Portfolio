@@ -5,13 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divyansh Yadav</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -23,14 +17,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="icon" href="./photos/title-logo.png">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
     <header class="scrolling-active">
+
         <h1 class="logo"><a href="#home"><img src="./photos/logo.png" alt=""></a></h1>
+
+
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <nav>
             <ul>
@@ -43,136 +41,138 @@
         <label for="nav-toggle" class="nav-toggle-label">
             <span></span>
         </label>
-    </header>
-    <div class="smooth-scroll-wrapper">
-        <div class="container1" id="home">
-            <div class="content home">
-                <div class="home">
-                    <h1>Hello.</h1>
-                </div>
-            </div>
-            <div class="content about" id="about">
-                <div class="about">
-                    <h1>Who's this guy?</h1>
-                    <p> Well, he's <span class="name">Divyansh</span>, a self-taught front-end developer based in Indore
-                        having a firm
-                        knowledge
-                        of HTML, CSS, and JavaScript. He also has a good understanding of the latest libraries and
-                        frameworks
-                        that are highly used in today's technology.
-                        <br>
-                        <br>
-                        As an individual, he enjoys learning new technologies. He's target-oriented and believes in
-                        putting
-                        consistent efforts towards his goal of becoming a Full-stack Developer. He also has a good
-                        grasping
-                        power along with an amicable
-                        personality <a href="#contact">(try contacting him and you'll know)</a>.
 
+    </header>
+
+
+    <div class="container1" id="home">
+
+        <div class="content home">
+            <div class="home">
+                <h1>Hello.</h1>
+            </div>
+        </div>
+
+        <div class="content about" id="about">
+            <div class="image">
+                <img class="my-photo" src="./photos/me.png" alt="Hey its me">
+            </div>
+            <div class="about">
+                <h2>Who's this guy?</h2>
+                <p>Well, he's <span class="name">Divyansh</span>, a self-taught front-end developer based in Indore
+                    having a firm
+                    knowledge
+                    of HTML, CSS, and JavaScript. He also has a good understanding of the latest libraries and
+                    frameworks
+                    that are highly used in today's technology.
+                    <br>
+                    <br>
+                    As an individual, he enjoys learning new technologies. He's target-oriented and believes in
+                    putting
+                    consistent efforts towards his goal of becoming a Full-stack Developer. He also has a good
+                    grasping
+                    power along with an amicable
+                    personality <a href="#contact">(try contacting him and you'll know)</a>.
+                </p>
+            </div>
+        </div>
+
+        <div class="content projects" id="projects">
+            <div class="projects">
+                <h2>Projects</h2>
+                <div class="project-list">
+                    <div class="weather-app">
+                        <img class="project-images" src="./photos/weather.png" alt="Weather App">
+                        <div class="weather-app-details">
+                            <h3>Weather App</h3>
+                            <p>A standard weather app developed in React, capable of displaying the weather
+                                conditions
+                                for a specific region based on the user's input.</p>
+                            <div class="links">
+                                <a class="source-code" target="_blank"
+                                    href="https://github.com/divyanshyadav20/Weather-App">Source
+                                    Code</a>
+                                <a class="live-project" target="_blank" href="https://dy-weather-app.netlify.app/">Live
+                                    Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="todolist">
+                        <img class="project-images" src="./photos/todolist.png" alt="Todo List">
+                        <div class="todo-list-details">
+                            <h3>Todo List</h3>
+                            <p>A Todo List application, capable of storing lists of different types, containing the
+                                user's todos in the local storage of the browser. Designed using HTML, CSS, and
+                                Vanilla
+                                JavaScript.</p>
+                            <div class="links">
+                                <a class="source-code" target="_blank"
+                                    href="https://github.com/divyanshyadav20/Todo-List">Source
+                                    Code</a>
+                                <a class="live-project" target="_blank"
+                                    href="https://divyansh-yadav-todo-list.netlify.app/">Live
+                                    Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator">
+                        <img class="project-images" src="./photos/calculator.png" alt="Calculator">
+                        <div class="calculator-details">
+                            <h3>Calculator</h3>
+                            <p>A simple calculator capable of performing basic arithmetic calculations, designed
+                                with
+                                the help of HTML, CSS, and Vanilla JavaScript.</p>
+                            <div class="links">
+                                <a class="source-code" target="_blank"
+                                    href="https://github.com/divyanshyadav20/Calculator">Source
+                                    Code</a>
+                                <a class="live-project" target="_blank"
+                                    href="https://divyansh-yadav-calculator.netlify.app/">Live
+                                    Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content contact" id="contact">
+            <div class="contact">
+                <h2>Contact</h2>
+                <p>Have a message or want to get in touch with me?</p>
+                <div class="social-icons">
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        - divyanshyadav20@gmail.com
                     </p>
-                </div>
-                <div class="image">
-                    <img class="my-photo" src="./photos/me.png" alt="Hey its me">
-                </div>
-            </div>
-            <div class="content projects" id="projects">
-                <div class="projects">
-                    <h1>Projects</h1>
-                    <div class="project-list">
-                        <div class="weather-app">
-                            <img class="project-images" src="./photos/weather.png" alt="Weather App">
-                            <div class="weather-app-details">
-                                <h2>Weather App</h2>
-                                <p>A standard weather app developed in React, capable of displaying the weather
-                                    conditions
-                                    for a specific region based on the user's input.</p>
-                                <div class="links">
-                                    <a class="source-code" target="_blank"
-                                        href="https://github.com/divyanshyadav20/Weather-App">Source
-                                        Code</a>
-                                    <a class="live-project" target="_blank"
-                                        href="https://dy-weather-app.netlify.app/">Live Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="todolist">
-                            <img class="project-images" src="./photos/todolist.png" alt="Todo List">
-                            <div class="todo-list-details">
-                                <h2>Todo List</h2>
-                                <p>A Todo List application, capable of storing lists of different types, containing the
-                                    user's todos in the local storage of the browser. Designed using HTML, CSS, and
-                                    Vanilla
-                                    JavaScript.</p>
-                                <div class="links">
-                                    <a class="source-code" target="_blank"
-                                        href="https://github.com/divyanshyadav20/Todo-List">Source
-                                        Code</a>
-                                    <a class="live-project" target="_blank"
-                                        href="https://divyansh-yadav-todo-list.netlify.app/">Live
-                                        Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="calculator">
-                            <img class="project-images" src="./photos/calculator.png" alt="Calculator">
-                            <div class="calculator-details">
-                                <h2>Calculator</h2>
-                                <p>A simple calculator capable of performing basic arithmetic calculations, designed
-                                    with
-                                    the help of HTML, CSS, and Vanilla JavaScript.</p>
-                                <div class="links">
-                                    <a class="source-code" target="_blank"
-                                        href="https://github.com/divyanshyadav20/Calculator">Source
-                                        Code</a>
-                                    <a class="live-project" target="_blank"
-                                        href="https://divyansh-yadav-calculator.netlify.app/">Live
-                                        Project</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="only-icons">
+                        <a href="https://www.linkedin.com/in/divyansh-yadav-60291b1b6/"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/divyanshyadav20"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/divyanshyadav/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="content contact" id="contact">
-                <div class="contact">
-                    <h1>Contact</h1>
-                    <p>Have a message or want to get in touch with me?</p>
-                    <div class="social-icons">
-                        <p>
-                            <i class="fas fa-envelope"></i>
-                            - divyanshyadav20@gmail.com
-                        </p>
-                        <div class="only-icons">
-                            <a href="https://www.linkedin.com/in/divyansh-yadav-60291b1b6/" target="_blank"><i
-                                    class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/divyanshyadav20" target="_blank"><i
-                                    class="fab fa-github"></i></a>
-                            <a href="https://www.instagram.com/divyanshyadav/" target="_blank"><i
-                                    class="fab fa-instagram"></i></a>
-                        </div>
+            <div class="contact-form">
+                <form action="https://formsubmit.co/4e8091d2c675668b6c232ffca712e4d2" method="POST">
+                    <input type="hidden" name="_subject" value="New submission!">
+                    <div class="form-group">
+                        <label for="exampleInputName1">Name</label>
+                        <input type="text" name="name" class="form-control" id="exampleInputName1"
+                            aria-describedby="emailHelp" placeholder="Enter your name" required>
                     </div>
-                </div>
-                <div class="contact-form">
-                    <form action="https://formsubmit.co/4e8091d2c675668b6c232ffca712e4d2" method="POST">
-                        <input type="hidden" name="_subject" value="New submission!">
-                        <div class="form-group">
-                            <label for="exampleInputName1">Name</label>
-                            <input type="text" name="name" class="form-control" id="exampleInputName1"
-                                aria-describedby="emailHelp" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email</label>
-                            <input type="email" name="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Enter your email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="comment">Message</label>
-                            <textarea class="form-control" name="message" id="comment" cols="30" rows="5"
-                                placeholder="Your message here.." required></textarea>
-                        </div>
-                        <button type="submit" id="button" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Message</label>
+                        <textarea class="form-control" name="message" id="comment" cols="30" rows="5"
+                            placeholder="Your message here.." required></textarea>
+                    </div>
+                    <button type="submit" id="button" class="btn btn-primary">Submit</button>
+                </form>
             </div>
         </div>
     </div>

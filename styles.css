@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500&display=swap");
+
 :root {
   --background: rgb(167, 157, 157);
-  --text-color: #f5deb3;
+  --darker-background: rgb(129, 120, 120);
+  --text-color: rgb(245, 222, 179);
   --header-color: rgb(0, 29, 56);
   --hover-color: rgb(245, 194, 100);
   --home-bg: url("./photos/home.jpg");
@@ -10,17 +13,16 @@
   --contact-msg-bg: url("./photos/contact-msg.jpg");
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-
-html,
 body {
   margin: 0;
   background: #222;
@@ -28,109 +30,220 @@ body {
   font-weight: 300;
 }
 
+/* Home Page */
+
 .content.home {
   height: 100vh;
   background-image: var(--home-bg);
+  background-position-x: right;
   background-color: var(--background);
   background-blend-mode: multiply;
   background-size: cover;
-  background-position-x: right;
-  color: var(--text-color);
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .content.home h1 {
-  margin-left: 2em;
-  font-size: 100px;
+  font-size: 5em;
+  color: var(--text-color);
 }
 
+/* About Page */
+
 .content.about {
-  height: 120vh;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
   background-image: var(--about-bg);
   background-color: var(--background);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position-x: center;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-photo {
+  width: 280px;
+  height: 280px;
+  margin-top: 5em;
+  transform: scale(1);
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 1px wheat;
+}
+
+.about {
+  width: 100%;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.2em;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+.about p {
+  width: 90%;
+  margin: 1em;
+  padding: 0;
+  font-size: 1.025em;
+}
+
+.about p a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.name {
+  font-weight: 500;
+}
+
+/* Projects Page */
+
+.content.projects {
+  height: 100%;
+  background-image: var(--projects-bg);
+  background-color: rgb(121, 113, 113);
   background-blend-mode: multiply;
   background-size: cover;
   background-position-x: right;
   color: var(--text-color);
   display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.project-images {
+  width: 80%;
+  margin-top: 1.7em;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px 0 black;
+}
+
+.content.projects h2 {
+  margin-bottom: 0;
+  margin-top: 2em;
+  font-size: 2.2em;
+}
+
+.weather-app,
+.todolist,
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.content.about h1 {
-  margin-left: 150px;
-  font-size: 70px;
-  margin-bottom: 0;
+.weather-app-details,
+.todo-list-details {
+  position: relative;
 }
-.content.about p {
-  margin-left: 150px;
+
+.weather-app-details::after,
+.todo-list-details::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: var(--text-color);
+  height: 2px;
+  left: 1em;
+  width: 90%;
+  border-radius: 2px;
+}
+
+.weather-app-details h3,
+.todo-list-details h3,
+.calculator-details h3 {
+  font-size: 1.7em;
   margin-top: 1em;
-  font-size: 22.5px;
 }
 
-.content.about .about {
-  width: 60%;
+.weather-app-details p,
+.todo-list-details p,
+.calculator-details p {
+  font-size: 1.1em;
 }
 
-.content.about .image {
-  width: 40%;
+.links {
+  margin: 0.7em 0;
 }
+
+.source-code,
+.live-project {
+  margin: 0 0.2em;
+  text-decoration: none;
+  color: var(--text-color);
+  position: relative;
+}
+
+.source-code:hover,
+.live-project:hover {
+  color: var(--hover-color);
+  text-decoration: none;
+}
+
+.source-code::after,
+.live-project::after {
+  content: "";
+  position: absolute;
+  background: var(--hover-color);
+  height: 2px;
+  left: 0;
+  width: 100%;
+  display: block;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 300ms;
+}
+
+.source-code:hover::after,
+.live-project:hover::after {
+  transform: scale(1, 1);
+}
+
+/* Contact Page */
 
 .content.contact {
-  height: 100vh;
-  background-image: var(--contact-bg);
+  height: 100%;
+  background: var(--contact-bg);
   background-color: rgb(88, 81, 81);
   background-blend-mode: multiply;
   background-size: cover;
   background-position-x: right;
   color: var(--text-color);
-  display: flex;
-  align-items: center;
-}
-
-.content.contact .contact {
-  margin-left: 4em;
-  width: 47%;
-}
-
-.content.contact .contact p {
-  font-size: 22.5px;
-}
-
-.contact-form {
-  width: 40%;
-  margin-top: 3em;
-  background-image: var(--contact-msg-bg);
-  background-color: var(--background);
-  background-blend-mode: multiply;
-  background-size: cover;
-  box-shadow: 5px 5px 5px 0 var(--text-color);
-  border-radius: 20px;
-  padding: 2.5em;
-}
-
-.social-icons {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
-.only-icons {
-  display: flex;
-  font-size: 30px;
+.contact h2 {
+  margin-bottom: 0;
+  margin-top: 2em;
+  font-size: 2.2em;
+}
+
+.contact p {
+  font-size: 1.3em;
   margin-top: 1em;
 }
 
-.only-icons a i.fab.fa-github,
-.only-icons a i.fab.fa-instagram {
-  margin-left: 1em;
+.only-icons {
+  font-size: 1.5em;
 }
 
 .only-icons a i.fab.fa-linkedin,
 .only-icons a i.fab.fa-github,
 .only-icons a i.fab.fa-instagram {
   text-decoration: none;
+  font-size: 1.5em;
   color: var(--text-color);
+  margin: 0.5em;
 }
 
 .only-icons a i.fab.fa-linkedin:hover {
@@ -143,147 +256,46 @@ body {
   color: #8a3ab9;
 }
 
-#button {
-  background-color: var(--header-color);
-  border: none;
-  color: var(--text-color);
-  box-shadow: 0 0px 5px 0 var(--text-color);
-}
-
-#button:hover {
-  background-color: var(--hover-color);
-  color: var(--header-color);
-  box-shadow: 0 0 10px 0 var(--text-color);
-}
-
-.name {
-  font-weight: 500;
-}
-
-.about a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: 400;
-}
-
-.about a:hover {
-  color: var(--hover-color);
-}
-
-.content.projects {
-  height: 100%;
-  background-image: var(--projects-bg);
-  background-color: rgb(121, 113, 113);
-  background-blend-mode: multiply;
-  background-size: cover;
-  background-position-x: right;
-  color: var(--text-color);
-}
-.content.projects h1 {
-  margin: 0;
-  padding-top: 80px;
-  text-align: center;
-  font-size: 70px;
-  margin-bottom: 1em;
-}
-
-.project-list {
-  display: flex;
-  flex-direction: column;
-  margin-left: 5em;
-}
-
-.weather-app,
-.todolist,
-.calculator {
-  display: flex;
-}
-
-.weather-app-details,
-.todo-list-details,
-.calculator-details {
-  margin-left: 2em;
-}
-
-.weather-app-details h2,
-.todo-list-details h2,
-.calculator-details h2 {
-  font-size: 2em;
-  margin-bottom: 0;
-}
-
-.weather-app-details p,
-.todo-list-details p,
-.calculator-details p {
-  width: 80%;
-  font-size: 1.35em;
-  margin-top: 0.5em;
-}
-
-.links {
-  margin-top: 3em;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.source-code,
-.live-project {
-  text-decoration: none;
-  color: var(--text-color);
-  margin-left: 3em;
-  font-size: 1.25em;
-  position: relative;
-}
-
-.source-code:hover,
-.live-project:hover {
-  color: var(--hover-color);
-  text-decoration: none;
-}
-
-.source-code:hover::after,
-.live-project:hover::after {
+.content.contact .contact::after {
   content: "";
   position: absolute;
-  background: var(--hover-color);
-  height: 2px;
-  width: 100%;
   display: block;
+  background: var(--text-color);
+  height: 2px;
+  left: 1em;
+  width: 90%;
+  border-radius: 2px;
 }
 
-.project-images {
-  width: 50%;
-  border-radius: 15px;
-  margin-bottom: 2em;
-  box-shadow: 5px 5px 10px 0 black;
+.contact-form {
+  width: 90%;
+  margin: 1em;
+  background-image: var(--contact-msg-bg);
+  background-color: var(--background);
+  background-blend-mode: multiply;
+  background-size: cover;
+  box-shadow: 5px 5px 5px 0 var(--text-color);
+  border-radius: 20px;
+  padding: 2em;
+  text-align: left;
 }
 
-.my-photo {
-  width: 300px;
-  height: 300px;
-  margin-left: 6em;
-  transform: scale(1);
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px 1px wheat;
-}
+/* Navigation */
 
 header {
   background: transparent;
-  text-align: center;
+  text-align: left;
   position: fixed;
   z-index: 999;
   width: 100%;
 }
 
 header h1 {
-  font-weight: 300;
   margin: 0;
-  color: var(--text-color);
 }
 
 header img {
-  margin-bottom: 1px;
+  margin-top: 0em;
 }
 
 header a:hover {
@@ -306,30 +318,30 @@ header a:hover {
 .nav-toggle-label {
   position: absolute;
   top: 0;
-  left: 0;
-  margin-left: 1em;
+  right: 0;
+  margin-right: 1em;
   height: 100%;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
+.nav-toggle-label span::after,
+.nav-toggle-label span::before {
   display: block;
-  background: white;
+  background: var(--text-color);
   height: 2px;
   width: 2em;
   border-radius: 2px;
   position: relative;
 }
 
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
+.nav-toggle-label span::after,
+.nav-toggle-label span::before {
   content: "";
   position: absolute;
 }
-
 .nav-toggle-label span::before {
   bottom: 7px;
 }
@@ -338,40 +350,35 @@ header a:hover {
   top: 7px;
 }
 
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-}
-
 nav {
   position: absolute;
-  text-align: left;
+  text-align: right;
   top: 100%;
-  left: 0;
-  background: var(--background);
+  right: 0;
+  background: transparent;
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
+  border-top: transparent;
 }
 
 nav ul {
   margin: 0;
+  margin-top: 5px;
   padding: 0;
   list-style: none;
 }
 
 nav li {
   margin-bottom: 1em;
-  margin-left: 1em;
+  margin-right: 1em;
 }
 
 nav a {
   color: var(--text-color);
   text-decoration: none;
   font-size: 1.2rem;
-  /* text-transform: uppercase; */
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
@@ -379,9 +386,9 @@ nav a {
 nav a:hover {
   color: white;
 }
-
 .nav-toggle:checked ~ nav {
   transform: scale(1, 1);
+  background: transparent;
 }
 
 .nav-toggle:checked ~ nav a {
@@ -389,22 +396,149 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 800px) {
-  .content {
-    background-position-x: center;
+.scrolling-active nav {
+  background: var(--header-color);
+  border-top: 1px solid var(--text-color);
+}
+
+.scrolling-active .nav-toggle:checked ~ nav {
+  background: var(--header-color);
+}
+
+/* Responsiveness */
+
+@media screen and (min-width: 768px) {
+  header {
+    width: 100vw;
+  }
+
+  /* header h1 img {
+    width: 4em;
+  } */
+
+  .nav-toggle-label,
+  header li {
+    margin-right: 2em;
+  }
+
+  .content.home h1 {
+    font-size: 6em;
+    margin-right: 2em;
+  }
+
+  .content.about {
+    height: 100vh;
+    background-position-x: right;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about h2 {
+    font-size: 3.8em;
+  }
+
+  .about p {
+    width: 80%;
+    font-size: 1.65em;
+  }
+
+  .content.projects h2 {
+    font-size: 3.8em;
+    margin-top: 1.4em;
+  }
+
+  .weather-app-details,
+  .todo-list-details,
+  .calculator-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .weather-app-details h3,
+  .todo-list-details h3,
+  .calculator-details h3 {
+    font-size: 3em;
+  }
+
+  .weather-app-details p,
+  .todo-list-details p,
+  .calculator-details p {
+    width: 70%;
+    font-size: 1.5em;
+  }
+
+  .weather-app-details::after,
+  .todo-list-details::after {
+    bottom: 0;
+    width: 90%;
+    margin-top: 1em;
+    left: 2.4em;
+  }
+
+  .source-code,
+  .live-project {
+    font-size: 1.25em;
+    margin: 0 0.7em;
+  }
+
+  .content.contact {
+    height: 100vh;
+  }
+
+  .contact h2 {
+    font-size: 3.8em;
+    margin-top: 1.6em;
+  }
+
+  .contact p {
+    font-size: 1.8em;
+  }
+
+  .only-icons {
+    font-size: 1.8em;
+  }
+
+  .only-icons a i.fab.fa-linkedin,
+  .only-icons a i.fab.fa-github,
+  .only-icons a i.fab.fa-instagram {
+    font-size: 1.8em;
+  }
+
+  .content.contact .contact::after {
+    left: 2.4em;
+  }
+
+  .contact-form {
+    width: 95%;
+    padding: 2.4em;
+    font-size: 1.2em;
+    height: 80%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(650px, 1fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
   }
 
   .nav-toggle-label {
     display: none;
   }
 
-  header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
-  }
-
-  .logo {
-    grid-column: 2 / 3;
+  .scrolling-active nav {
+    border: none;
   }
 
   nav {
@@ -417,11 +551,13 @@ nav a:hover {
 
   nav ul {
     display: flex;
+    margin-top: 0;
   }
 
   nav li {
-    margin-left: 3em;
+    margin-left: 1em;
     margin-bottom: 0;
+    margin-top: 0;
   }
 
   nav a {
@@ -444,5 +580,174 @@ nav a:hover {
 
   nav a:hover::before {
     transform: scale(1, 1);
+  }
+
+  .content.home h1 {
+    font-size: 7em;
+    margin-right: 5em;
+  }
+
+  .content.about {
+    flex-direction: row-reverse;
+    height: 120vh;
+  }
+
+  .about {
+    display: block;
+    text-align: left;
+    align-items: flex-start;
+    width: 60%;
+  }
+
+  .about h2 {
+    margin-left: 150px;
+    font-size: 70px;
+  }
+  .about p {
+    margin-left: 150px;
+    font-size: 22.5px;
+    width: 74%;
+  }
+
+  .image {
+    width: 40%;
+  }
+
+  .my-photo {
+    width: 300px;
+    height: 300px;
+    margin-left: 6em;
+    margin-top: 3em;
+  }
+
+  .content.projects {
+    flex-direction: row;
+  }
+
+  .content.projects p {
+    text-align: left;
+  }
+
+  .content.projects h2 {
+    font-size: 70px;
+    margin-top: 1.1em;
+    margin-bottom: 0.6em;
+  }
+
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5em;
+  }
+
+  .weather-app,
+  .todolist,
+  .calculator {
+    flex-direction: row;
+  }
+
+  .weather-app-details,
+  .todo-list-details,
+  .calculator-details {
+    margin-left: 2em;
+    margin-bottom: 2em;
+    align-items: flex-start;
+  }
+
+  .weather-app-details h3,
+  .todo-list-details h3,
+  .calculator-details h3 {
+    text-align: left;
+    font-size: 2em;
+    margin-bottom: 0;
+  }
+  .weather-app-details p,
+  .todo-list-details p,
+  .calculator-details p {
+    width: 80%;
+    font-size: 1.35em;
+    margin-top: 0.5em;
+  }
+
+  .links {
+    margin-top: 2em;
+    margin-left: 4em;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .project-images {
+    width: 50%;
+    border-radius: 15px;
+    margin-bottom: 2em;
+    box-shadow: 5px 5px 10px 0 black;
+  }
+
+  .weather-app-details::after,
+  .todo-list-details::after {
+    display: none;
+  }
+
+  .content.contact {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .content.contact .contact {
+    margin-left: 4em;
+    width: 47%;
+  }
+
+  .content.contact .contact h2 {
+    font-size: 40px;
+    margin-top: 0;
+  }
+  .content.contact .contact p {
+    font-size: 22.5px;
+    margin-top: 0.5em;
+  }
+
+  .contact-form {
+    width: 40%;
+    margin-top: 3em;
+    padding: 2.5em;
+    margin: 0;
+    margin-top: 32px;
+    height: unset;
+    font-size: 1em;
+  }
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .only-icons a i.fab.fa-linkedin,
+  .only-icons a i.fab.fa-github,
+  .only-icons a i.fab.fa-instagram {
+    font-size: 1em;
+    margin: 0;
+    margin-left: 0.5em;
+  }
+  .only-icons a i.fab.fa-linkedin {
+    margin: 0;
+  }
+
+  .content.contact .contact::after {
+    display: none;
+  }
+
+  #button {
+    background-color: var(--header-color);
+    border: none;
+    color: var(--text-color);
+    box-shadow: 0 0px 5px 0 var(--text-color);
+  }
+
+  #button:hover {
+    background-color: var(--hover-color);
+    color: var(--header-color);
+    box-shadow: 0 0 10px 0 var(--text-color);
   }
 }
