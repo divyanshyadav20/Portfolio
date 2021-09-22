@@ -11,6 +11,7 @@
   --projects-bg: url("./photos/projects.jpg");
   --contact-bg: url("./photos/contact.jpg");
   --contact-msg-bg: url("./photos/contact-msg.jpg");
+  --dot-color: #89023e;
 }
 
 *,
@@ -64,6 +65,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.dot {
+  color: var(--dot-color);
 }
 
 .my-photo {
