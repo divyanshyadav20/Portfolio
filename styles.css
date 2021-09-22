@@ -8,6 +8,7 @@
   --hover-color: rgb(245, 194, 100);
   --home-bg: url("./photos/home.jpg");
   --about-bg: url("./photos/about.jpg");
+  --about-bg-mobile: url("./photos/about2.jpg");
   --projects-bg: url("./photos/projects.jpg");
   --contact-bg: url("./photos/contact.jpg");
   --contact-msg-bg: url("./photos/contact-msg.jpg");
@@ -56,7 +57,7 @@ body {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  background-image: var(--about-bg);
+  background-image: var(--about-bg-mobile);
   background-color: var(--background);
   background-blend-mode: multiply;
   background-size: cover;
@@ -608,6 +609,8 @@ nav a:hover {
   .content.about {
     flex-direction: row-reverse;
     height: 120vh;
+    background-image: var(--about-bg);
+    background-position-x: right;
   }
 
   .about {
